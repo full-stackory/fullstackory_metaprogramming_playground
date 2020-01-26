@@ -1,44 +1,88 @@
-# MetaprogrammingPlayground
+# FullstackoryMetaprogrammingPlayground
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/metaprogramming_playground`. To experiment with that code, run `bin/console` for an interactive prompt.
+Welcome to this gem!
+Put your Ruby code in the file `lib/metaprogramming_playground`.
+To experiment with that code, run `bin/console` for an interactive prompt.
 
-TODO: Delete this and the text above, and describe your gem
+In this gem we are exploring the Adapter Pattern
 
-## Installation
+## Environment
+### Dependencies
+#### Install Xcode Tools
+`xcode-select --install`
 
-Add this line to your application's Gemfile:
+#### Install [Homebrew](http://brew.sh/)
+`/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 
-```ruby
-gem 'metaprogramming_playground'
-```
+#### Install [RVM](https://rvm.io/)
+`\curl -sSL https://get.rvm.io | bash -s stable`
 
-And then execute:
+#### Load up RVM on shell instantiation
+`echo '[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function' >> ~/.bash_profile`
+OR
+`echo '[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function' >> ~/.zsh_profile`
 
-    $ bundle install
+#### Install [Ruby](https://www.ruby-lang.org/en/)
+`rvm install 2.7.0`
 
-Or install it yourself as:
+#### Install [Bundler](http://bundler.io/)
+`gem install bundler`
 
-    $ gem install metaprogramming_playground
+### Running
+#### Get the code
+`git clone git@github.com:REPO_NAME_HERE`
+
+#### Use the correct ruby version
+`rvm use 2.7.0`
+
+#### Install all needed Gems
+`bin/setup`
+
+#### To Run Tests
+`rake`
+
+#### For an interactive prompt
+`bin/console`
 
 ## Usage
 
-TODO: Write usage instructions here
+### Section A
+#### Setup
+* Open two panes in your terminal both inside the gem directory
+* In one pane run `bin/console`
+* To start in your console run `SectionAAdapterPattern.intro` to get started
+* In the other pane run `rake test TEST=test/section_a_test.rb`
+### Get Started
+* Now you checkout the code and comments in `lib/metaprogramming_playground/section_a.rb`
+* Walk through the code and comments to get familiar with the Metaprogramming
+* The tests should be green when you run them for the first time
+* Read over the tests `test/section_a_test.rb`
 
-## Development
+### Section B
+#### Setup
+* Setup in the same way as for section A
+### Get Started
+* Now you checkout the code and comments in `lib/metaprogramming_playground/section_b.rb`
+* Walk through the code and comments to see an example of the Adapter Pattern
+* The tests should be green when you run them for the first time
+* Read over the tests `test/section_b_test.rb`
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+### Section C
+#### Setup
+* Setup in the same way as for section A and B
+### Get Started
+* Now you checkout the code and comments in `lib/metaprogramming_playground/section_c.rb`
+* Walk through the code and comments to see skeleton of the Adapter Pattern
+* The tests should be red when you run them for the first time
+* Work on updating the tests and code so that all of them pass
+* Dig in and make the implementation your own
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/metaprogramming_playground. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/metaprogramming_playground/blob/master/CODE_OF_CONDUCT.md).
-
-
-## License
-
-The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
-## Code of Conduct
-
-Everyone interacting in the MetaprogrammingPlayground project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/metaprogramming_playground/blob/master/CODE_OF_CONDUCT.md).
+### Section D
+#### Setup
+* Setup in the same way as for section A, B and C
+### Get Started
+* Now you checkout the code and comments in `lib/metaprogramming_playground/section_d.rb`
+* Walk through the comments to see a description of a feature
+* Here, you need to implement your own DSL based on your learnings from A, B, C.
+* The tests need to pass in order for your functionality to be complete.
+* Work on writing tests and code so that your feature works are has tests
